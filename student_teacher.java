@@ -11,23 +11,11 @@ public class student_teacher {
 	// Then randomly display the questions.
 	// Collect the answer from that student and then display the score in the end.
 
-	// public void getQuestions() {
-	// //To get a random question from the database.
-	//
-	// }
-	//
-	// public void enterQuestion() {
-	// //To store a question.
-	// //Also include the option to enter the choices and the answer.
-	// }
-	//
-	// public void deleteQues() {
-	// //Can take an integer as an input and delete the question associated with it.
-	// }
 	questions q = new questions();
+	
 
 	public class questions {
-		
+
 		String ques1 = null;
 		String ques2 = null;
 		String ques3 = null;
@@ -40,62 +28,155 @@ public class student_teacher {
 		String ans4;
 		String ans5;
 
+		String q1_c1;
+		String q1_c2;
+		String q1_c3;
+		String q1_c4;
+
+		String q2_c1;
+		String q2_c2;
+		String q2_c3;
+		String q2_c4;
+
+		String q3_c1;
+		String q3_c2;
+		String q3_c3;
+		String q3_c4;
+
+		String q4_c1;
+		String q4_c2;
+		String q4_c3;
+		String q4_c4;
+
+		String q5_c1;
+		String q5_c2;
+		String q5_c3;
+		String q5_c4;
+
 		Scanner s = new Scanner(System.in);
 		int score = 0;
 
-		public String getQues(int n) {
+		public void getQues(int n) {
 			// randomly return a question. range (0-n)
-
-			String s = null;
-			return s;
+			System.out.println(ques1);
+			System.out.println(ques2);
+			System.out.println(ques3);
+			System.out.println(ques4);
+			System.out.println(ques5);
 		}
 
 		public void enter_ques(int ques) {
 			if (ques == 1) {
 				System.out.println("Enter the question.");
 				ques1 = s.nextLine();
-			} else if (ques == 2) {
+				System.out.println("Now enter the choices for the question.");
+				q1_c1 = s.nextLine();
+				q1_c2 = s.nextLine();
+				q1_c3 = s.nextLine();
+				q1_c4 = s.nextLine();
+				
+
+			}
+			if (ques == 2) {
 				System.out.println("Enter the question.");
 				ques2 = s.nextLine();
+				System.out.println("Now enter the choices for the question.");
+				q2_c1 = s.nextLine();
+				q2_c2 = s.nextLine();
+				q2_c3 = s.nextLine();
+				q2_c4 = s.nextLine();
+				
 
-			} else if (ques == 3) {
+			}
+			if (ques == 3) {
 				System.out.println("Enter the question.");
 				ques3 = s.nextLine();
+				System.out.println("Now enter the choices for the question.");
+				q3_c1 = s.nextLine();
+				q3_c2 = s.nextLine();
+				q3_c3 = s.nextLine();
+				q3_c4 = s.nextLine();
+				
 
-			} else if (ques == 4) {
+			}
+			if (ques == 4) {
 				System.out.println("Enter the question.");
 				ques4 = s.nextLine();
+				System.out.println("Now enter the choices for the question.");
+				q4_c1 = s.nextLine();
+				q4_c2 = s.nextLine();
+				q4_c3 = s.nextLine();
+				q4_c4 = s.nextLine();
+				
 
-			} else if (ques == 5) {
+			}
+			if (ques == 5) {
 				System.out.println("Enter the question.");
 				ques5 = s.nextLine();
-
+				System.out.println("Now enter the choices for the question.");
+				q5_c1 = s.nextLine();
+				q5_c2 = s.nextLine();
+				q5_c3 = s.nextLine();
+				q5_c4 = s.nextLine();
+				
 			}
 		}
 
-		public void enter_choices() {
-			//get the choices here.
-			System.out.println("Enter the choices for this question.");
-			
-			
+		public void display_choices(int ques) {
+			if (ques == 1) {
+				
+				System.out.println(q1_c1);
+				System.out.println(q1_c2);
+				System.out.println(q1_c3);
+				System.out.println(q1_c4);
+			} else if (ques == 2) {
+				
+				System.out.println(q2_c1);
+				System.out.println(q2_c2);
+				System.out.println(q2_c3);
+				System.out.println(q2_c4);
+			} else if (ques == 3) {
+				
+				System.out.println(q3_c1);
+				System.out.println(q3_c2);
+				System.out.println(q3_c3);
+				System.out.println(q3_c4);
+			} else if (ques == 4) {
+				
+				System.out.println(q4_c1);
+				System.out.println(q4_c2);
+				System.out.println(q4_c3);
+				System.out.println(q4_c4);
+			} else if (ques == 5) {
+				
+				System.out.println(q5_c1);
+				System.out.println(q5_c2);
+				System.out.println(q5_c3);
+				System.out.println(q5_c4);
+			}
 		}
-
-		public void display_choices(String ques) {
-			if (ques.equals(ques1)) {
-				// display choices of ques1
-			} else if (ques.equals(ques2)) {
-				// display choices of ques2
-			} else if (ques.equals(ques3)) {
-				// display choices of ques3
-			} else if (ques.equals(ques4)) {
-				// display choices of ques4
-			} else if (ques.equals(ques5)) {
-				// display choices of ques5
+		
+		public void enter_ans(int ques) {
+			
+			if(ques == 1) {
+				System.out.println("Enter the answer for this question.");
+				ans1 = s.nextLine();
+			} if(ques == 2) {
+				System.out.println("Enter the answer for this question");
+				ans2 = s.nextLine();
+			} if(ques == 3) {
+				System.out.println("Enter the answer for this question");
+				ans3 = s.nextLine();
+			} if(ques == 4) {
+				System.out.println("Enter the answer for this question");
+				ans4 = s.nextLine();
+			} if(ques == 5) {
+				System.out.println("Enter the answer for this question");
+				ans5 = s.nextLine();
 			}
 		}
 
 		public String getans(String ques) {
-
 			String warning = "You have entered a wrong choice.";
 
 			if (ques.equals(ques1)) {
@@ -111,9 +192,51 @@ public class student_teacher {
 			} else
 				return warning;
 		}
+		
+		public void displayQuesChoice() {
+			System.out.println(ques1);
+			System.out.println(q1_c1);
+			System.out.println(q1_c2);
+			System.out.println(q1_c3);
+			System.out.println(q1_c4);
+			
+			System.out.println(ques2);
+			System.out.println(q2_c1);
+			System.out.println(q2_c2);
+			System.out.println(q3_c3);
+			System.out.println(q4_c4);
+			
+			System.out.println(ques3);
+			System.out.println(q3_c1);
+			System.out.println(q3_c2);
+			System.out.println(q3_c3);
+			System.out.println(q3_c4);
+			
+			System.out.println(ques4);
+			System.out.println(q4_c1);
+			System.out.println(q4_c2);
+			System.out.println(q4_c3);
+			System.out.println(q4_c4);
+			
+			System.out.println(ques5);
+			System.out.println(q5_c1);
+			System.out.println(q5_c2);
+			System.out.println(q5_c3);
+			System.out.println(q5_c4);
+			
+		}
+		public void student_portal() {
+			
+			int num = 0;
+			Scanner s = new Scanner(System.in);
+			
+			System.out.println("Welcome to the Students portal");
+			System.out.println("How many questions do you want to solve?");
+			num = s.nextInt();
+			
+			displayQuesChoice();
+		}
 	}
-	
-	
 
 	public static void main(String[] args) {
 		// First create a choice to enter the student or teacher mode.
@@ -130,30 +253,28 @@ public class student_teacher {
 		choice = s.nextInt();
 
 		if (choice == 1) {
-			
+			int n = 0;
 			System.out.println("Welcome to the Teachers portal");
-			for(int i=0; i<5; i++) {
+			
+			System.out.println("How many questions do you want to enter?");
+			n = s.nextInt();
+			
+			for (int i = 0; i < n; i++) {
 				int ques_num = 0;
-				
-			System.out.println("Please enter the question number");
-			st.q.enter_ques(ques_num);
-			//Now enter the choices and then the answer.
-			
-			
+
+				System.out.println("Please enter the question number");
+				ques_num = s.nextInt();
+				st.q.enter_ques(ques_num);
+				st.q.enter_ans(ques_num);
 			}
+			
+			System.out.println("Thank you for your patience. Exiting Teachers' portal now...");
+			System.out.printf("\n\n");
+			
+			st.q.student_portal();
 
 		} else if (choice == 2) {
-			// Enter student portal
-			// Set a limit to the max number of questions a student can anwer. eg = 5;
-			System.out.println("Welcome to the Students portal");
-			System.out.println("How many questions do you want to solve?");
-			num = s.nextInt();
-
-			for (int i = 0; i < num; i++) {
-				// n
-				// display questions
-				// call the function getQues(num) n times.
-			}
+			st.q.student_portal();
 
 		} else {
 			System.out.println("Wrong choice entered."); // Can provide an option to enter the choice again.
