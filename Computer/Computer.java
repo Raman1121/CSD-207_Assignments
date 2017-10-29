@@ -1,8 +1,8 @@
 package Computer;
-import Storage.Data;
+import Storage.*;
 
 public class Computer {
-	public Data d;
+	Internal i = new Internal();
 	 String processor;
 	 String ram;
 	 String MotherBoard;

@@ -7,7 +7,7 @@ public class User {
 	public String name;
 	public int id;
 	public Data d;
-	public ArrayList<String> device_list;
+	public ArrayList<Computer> device_list;		//Should b of the type computer
 	public ArrayList<String> storage_list;
 	
 }

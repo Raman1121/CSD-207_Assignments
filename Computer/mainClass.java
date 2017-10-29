@@ -74,23 +74,23 @@ public class mainClass {
 			l.ram = s.next();
 			System.out.println("Enter the Mother Board");
 			l.MotherBoard = s.next();
-			u.device_list.add("Laptop");
+			//u.device_list.add("Laptop");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			l.d.data = s.next();
+			l.i.d.data= s.next();
 //			System.out.println("Is your device charging?");
 //			l.isCharging = s.nextBoolean();
 		}
 		
-		else if(choice == 2) {
+		 if(choice == 2) {
 			System.out.println("Enter the RAM");
 			t.ram = s.next();
 			System.out.println("Enter the Mother Board");
 			t.MotherBoard = s.next();
-			u.device_list.add("Tablet");
+			//u.device_list.add("Tablet");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			t.d.data= s.next();
+			t.i.d.data = s.next();
 //			System.out.println("Is your device charging?");
 //			t.isCharging = s.nextBoolean();
 		}
@@ -100,22 +100,22 @@ public class mainClass {
 			m.ram = s.next();
 			System.out.println("Enter the Mother Board");
 			m.MotherBoard = s.next();
-			u.device_list.add("Mobile");
+			//u.device_list.add("Mobile");
 			System.out.println("Enter the data for internal storage");
-			m.d.data = s.next();
+			m.i.d.data = s.next();
 //			System.out.println("Is your device charging?");
 //			m.isCharging = s.nextBoolean();
 		}
 		
-		else if(choice == 4) {
+		 if(choice == 4) {
 			System.out.println("Enter the RAM");
 			d.ram = s.next();
 			System.out.println("Enter the Mother Board");
 			d.MotherBoard = s.next();
-			u.device_list.add("Desktop");
+			//u.device_list.add("Desktop");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			d.d.data = s.next();
+			d.i.d.data = s.next();
 		}
 	}
 	
@@ -130,24 +130,24 @@ public class mainClass {
 			System.out.println("Enter the data for the USB");
 			r.d.data = s.nextLine();
 			u.d.data = r.d.data;
-			u.device_list.add("USB");
-			users.add(u);
+			//u.device_list.add("USB");
+			//users.add(u);
 			
 		}
-		else if(choice == 2) {
+		 if(choice == 2) {
 			System.out.println("Enter the data for the External HDD");
 			e.d.data = s.nextLine();
 			u.d.data = e.d.data;
-			u.device_list.add("External HDD");
-			users.add(u);
+			//u.device_list.add("External HDD");
+			//users.add(u);
 			
 		}
-		else if(choice == 3) {
+		 if(choice == 3) {
 			System.out.println("Enter the data for the Memory Card");
 			i.d.data = s.nextLine();
 			u.d.data = i.d.data;
-			u.device_list.add("Memory Card");
-			users.add(u);
+//			u.device_list.add("Memory Card");
+//			users.add(u);
 			
 		}
 	}
