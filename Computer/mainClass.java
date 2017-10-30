@@ -8,10 +8,6 @@ public class mainClass {
 	
 	static ArrayList<User> users = new ArrayList<>();
 	
-	static Laptop l;
-	static Desktop d;
-	static Tab t;
-	static Mobile m;
 	static User u;
 	
 	static External e;
@@ -19,8 +15,7 @@ public class mainClass {
 	static Removal r;
 	
 	public static void main(String[] args) {
-		
-		
+			
 		//Variable Declarations
 		int no_dev;
 		int choice1, choice2;
@@ -63,91 +58,132 @@ public class mainClass {
 	
 	public static void decide1(int choice) {
 		
+		Computer c;
 		
-		l = new Laptop();
-		d = new Desktop();
-		t = new Tab();
-		m = new Mobile();
-		
-		if(choice == 1) {
+		if(choice == 1) {	
+			String data_usb;
+			c = new Laptop();
 			System.out.println("Enter the RAM");
-			l.ram = s.next();
+			c.ram = s.next();
 			System.out.println("Enter the Mother Board");
-			l.MotherBoard = s.next();
-			//u.device_list.add("Laptop");
+			c.MotherBoard = s.next();
+			u.device_list.add("Laptop");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			l.i.d.data= s.next();
-//			System.out.println("Is your device charging?");
-//			l.isCharging = s.nextBoolean();
+			c.i.d.data= s.next();
+			System.out.println("Is the USB connected?(y/n");
+			ch = s.next();
+			if(c.ch == 'y') {
+				System.out.println("Enter the data for the USB");
+				data_usb = s.next();
+				c.r.d.data = data_usb;
+			}else {
+				
+			}
 		}
 		
 		 if(choice == 2) {
+			c = new Tab();
+			String data_usb;
+			
 			System.out.println("Enter the RAM");
-			t.ram = s.next();
+			c.ram = s.next();
 			System.out.println("Enter the Mother Board");
-			t.MotherBoard = s.next();
-			//u.device_list.add("Tablet");
+			c.MotherBoard = s.next();
+			u.device_list.add("Tablet");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			t.i.d.data = s.next();
-//			System.out.println("Is your device charging?");
-//			t.isCharging = s.nextBoolean();
+			c.i.d.data = s.next();
+			System.out.println("Is your device charging?");
+			t.isCharging = s.nextBoolean();
+			System.out.println("Is the USB connected?(y/n");
+			ch = s.next();
+			if(c.ch == 'y') {
+				System.out.println("Enter the data for the USB");
+				data_usb = s.next();
+				c.r.d.data = data_usb;
+			}else {
+				
+			}
 		}
 		
 		else if(choice == 3) {
+			c = new Mobile();
+			String data_usb;
+			
 			System.out.println("Enter the RAM");
-			m.ram = s.next();
+			c.ram = s.next();
 			System.out.println("Enter the Mother Board");
-			m.MotherBoard = s.next();
+			c.MotherBoard = s.next();
 			//u.device_list.add("Mobile");
 			System.out.println("Enter the data for internal storage");
-			m.i.d.data = s.next();
-//			System.out.println("Is your device charging?");
-//			m.isCharging = s.nextBoolean();
+			c.i.d.data = s.next();
+			System.out.println("Is your device charging?");
+			m.isCharging = s.nextBoolean();
+			System.out.println("Is the USB connected?(y/n)");
+			ch = s.next();
+			if(c.ch == 'y') {
+				System.out.println("Enter the data for the USB");
+				data_usb = s.next();
+				c.r.d.data = data_usb;
+			}else {
+				
+			}
 		}
 		
 		 if(choice == 4) {
+			c = new Desktop();
+			String data_usb;
+			
 			System.out.println("Enter the RAM");
-			d.ram = s.next();
+			c.ram = s.next();
 			System.out.println("Enter the Mother Board");
-			d.MotherBoard = s.next();
-			//u.device_list.add("Desktop");
+			c.MotherBoard = s.next();
+			u.device_list.add("Desktop");
 			users.add(u);
 			System.out.println("Enter the data for internal storage");
-			d.i.d.data = s.next();
+			c.i.d.data = s.next();
+			System.out.println("Is the USB connected?(y/n");
+			ch = s.next();
+			if(c.ch == 'y') {
+				System.out.println("Enter the data for the USB");
+				data_usb = s.next();
+				c.r.d.data = data_usb;
+			}else {
+				
+			}
 		}
 	}
 	
 	public static void decide2(int choice) {	
 		
-		e = new External();
-		i = new Internal();
-		r = new Removal();
-		
-		
+		Storage s;
+				
 		if(choice == 1) {
+			s = new Removal();
 			System.out.println("Enter the data for the USB");
-			r.d.data = s.nextLine();
-			u.d.data = r.d.data;
-			//u.device_list.add("USB");
-			//users.add(u);
+			s.d.data = s.nextLine();
+			u.d.data = s.d.data;
+			u.device_list.add("USB");
+			users.add(u);
 			
 		}
 		 if(choice == 2) {
+			 s = new External();
 			System.out.println("Enter the data for the External HDD");
-			e.d.data = s.nextLine();
-			u.d.data = e.d.data;
-			//u.device_list.add("External HDD");
-			//users.add(u);
+			s.d.data = s.nextLine();
+			u.d.data = s.d.data;
+			u.device_list.add("External HDD");
+			users.add(u);
 			
 		}
 		 if(choice == 3) {
+			s = new Internal();			
 			System.out.println("Enter the data for the Memory Card");
-			i.d.data = s.nextLine();
-			u.d.data = i.d.data;
-//			u.device_list.add("Memory Card");
-//			users.add(u);
+			s.d.data = s.nextLine();
+			u.d.data = s.d.data;
+			u.device_list.add("Memory Card");
+			users.add(u);
 			
 		}
 	}
@@ -169,13 +205,35 @@ public class mainClass {
 				choice = s.nextInt();
 				
 				if(choice == 1) {
-					//View the data in Laptop
+					if(c instanceof Laptop) {
+						System.out.println(c.i.data);
+						if(c.ch == 'y') {
+							System.out.println(c.i.data);
+						}
+					}
 				}else if(choice == 2) {
-					//View the data in Tablet
+					if (c instanceof Tablet) {
+						System.out.println(c.i.data);
+						if(c.ch == 'y') {
+							System.out.println(c.i.data);
+						}
+					}
+					
 				}else if(choice == 3) {
-					//View the data in Mobile
+					if (c instanceof Mobile) {
+						System.out.println(c.i.data);
+						if(c.ch == 'y') {
+							System.out.println(c.i.data);
+						}
+					}
+					
 				}else if(choice == 4) {
-					//View the data in Desktop
+					if(c instanceof Desktop) {
+						System.out.println(c.i.data);
+						if(c.ch == 'y') {
+							System.out.println(c.i.data);
+						}
+					}
 				}
 			}
 		}

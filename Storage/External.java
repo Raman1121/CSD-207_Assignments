@@ -2,7 +2,6 @@ package Storage;
 
 public class External extends Storage{
 	
-	public Data d = new Data();
 
 	@Override
 	void persistent_storage() {
